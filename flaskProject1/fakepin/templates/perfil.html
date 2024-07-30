@@ -1,0 +1,13 @@
+{% extends "homescreen.html" %}
+
+{% block titulo %}
+<title>{{ usuario }}</title>
+{% endblock %}
+
+{% block body %}
+<body>
+    <p>Olá {{ usuario }}</p>
+    <a href="{{ url_for('homescreen') }}">sair</a>
+</body>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block titulo %}
+    <title>Pinterest</title>
+    {% endblock %}
+    <style>
+        p{
+            color: darkred;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+{% block body %}
+<body>
+    <p>Synapse</p>
+    <form method="post">
+        {{ form.csrf_token }}
+
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.senha.label() }}
+        {{ form.senha() }}
+
+        {{ form.submit() }}
+    </form>
+    <a href="{{ url_for('criarconta') }}">Criar conta</a>
+</body>
+{% endblock %}
+</html>
